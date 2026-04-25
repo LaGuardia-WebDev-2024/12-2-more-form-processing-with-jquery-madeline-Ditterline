@@ -31,7 +31,14 @@
 
       $("#donut-form").on("submit", function (event) {
         event.preventDefault();
-
+$("#donut-form").on("submit", function(event){
+  event.preventDefault();
+  var $donutType = $(this).find("[name=type]");
+  var donutTypre = $donutType.val();
+  var $img = $("<img>");
+  $img.width(100);
+  $img.attr("src",donutImages[donutType]);
+})
         
         
         
